@@ -109,6 +109,38 @@ a.brand-group:hover .brand-text h1 {
     max-width: 200px;
   }
 }
+/* Keep the whole header on one line on phones: shrink all header images */
+@media (max-width: 520px) {
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .brand-logo {
+    height: 46px;
+  }
+  .partner-logo {
+    height: 38px;
+  }
+  .brand-group {
+    gap: 10px;
+    flex-shrink: 1;
+  }
+  .partner-logos {
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  a.brand-group .brand-wordmark {
+    max-width: 150px;
+  }
+  .brand-text p {
+    font-size: 0.72rem;
+  }
+}
+@media (max-width: 360px) {
+  .brand-logo { height: 40px; }
+  .partner-logo { height: 32px; }
+  a.brand-group .brand-wordmark { max-width: 115px; }
+}
 @media (max-width: 520px) {
   .nav-link {
     padding: 10px 10px;
