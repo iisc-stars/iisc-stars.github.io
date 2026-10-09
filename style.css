@@ -71,6 +71,18 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+  min-width: 0;
+  max-width: 100%;
+}
+a.brand-group {
+  color: inherit;
+  text-decoration: none;
+}
+a.brand-group:hover {
+  text-decoration: none;
+}
+a.brand-group:hover .brand-text h1 {
+  color: var(--primary-light);
 }
 .brand-logo {
   height: 70px;
@@ -81,6 +93,30 @@ header {
   color: var(--primary);
   font-weight: 700;
   line-height: 1.2;
+}
+.brand-text {
+  min-width: 0;
+}
+.brand-wordmark {
+  max-height: 44px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+@media (max-width: 760px) {
+  a.brand-group .brand-wordmark {
+    max-width: 200px;
+  }
+}
+@media (max-width: 520px) {
+  .nav-link {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  .top-bar-inner {
+    justify-content: center;
+  }
 }
 .brand-text p {
   font-size: 0.85rem;
@@ -95,27 +131,38 @@ header {
   height: 60px;
   width: auto;
 }
+.partner-logos a {
+  line-height: 0;
+}
+.partner-logos a:hover .partner-logo {
+  opacity: 0.85;
+}
 
 /* Navigation */
 nav {
   background: var(--primary);
 }
+nav .container {
+  max-width: 1320px;
+}
 .nav-list {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .nav-item {
   position: relative;
 }
 .nav-link {
   display: block;
-  padding: 12px 16px;
+  padding: 12px 13px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
   transition: background 0.2s;
 }
 .nav-link:hover, .nav-item.active .nav-link {

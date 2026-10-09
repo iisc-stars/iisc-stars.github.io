@@ -29,6 +29,11 @@ The dump contained every image the original site used (see
 - **Footer** — the eight GoI initiative logos from the original footer (myGov, ECI, IMPRINT,
   NDL, Digital India, data.gov.in, Swachh Bharat, MoE).
 - **Favicon** — original favicon set.
+- **Header** — logo, emblem and IISc logo now link out (home, india.gov.in, iisc.ac.in respectively —
+  logo-to-home matches the original header behaviour); the original `starstext.png` scheme-name
+  wordmark replaces the plain-text `<h1>`, exactly as the original header had it.
+- **Contact page** — the original static `gmap.jpg` map of IISc restored (links to Google Maps;
+  tracking-free replacement of the original Maps iframe).
 
 ## Change 3 — New pages (recovered content, no repetition) ✅
 

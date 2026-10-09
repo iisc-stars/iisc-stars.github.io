@@ -97,16 +97,26 @@ coloured bottom borders (#004a8b, #08c2f0, #26da99, #52aa2b, #ec961c).
 
 | Source | Destination | Used as |
 |---|---|---|
-| `front/assets/images/logo.png` | `assets/images/logo.png` (already present in v1) | Header logo |
-| `front/assets/images/emblem.png` | `assets/images/emblem.png` (already present) | Header, Emblem of India |
-| `front/assets/images/iscbangalore.png` | `assets/images/iscbangalore.png` (already present) | Header, IISc |
-| `front/assets/images/moe.jpg` | `assets/images/moe.jpg` | (available; spare) |
+| `front/assets/images/logo.png` | `assets/images/logo.png` (already present in v1) | Header logo (links to home, as in the original) |
+| `front/assets/images/starstext.png` (821×71) | `assets/images/starstext.png` | "STARS" wordmark in the header `<h1>` (exactly as the original header did) |
+| `front/assets/images/emblem.png` | `assets/images/emblem.png` (already present) | Header, Emblem of India (links to india.gov.in) |
+| `front/assets/images/iscbangalore.png` | `assets/images/iscbangalore.png` (already present) | Header, IISc (links to iisc.ac.in) |
+| `front/assets/images/gmap.jpg` (1100×430) | `assets/images/iisc-map.jpg` | contact.html — static map of IISc, links to Google Maps (tracking-free replacement of the original Maps iframe) |
 | `front/assets/images/favicon/favicon.ico`, `favicon-32x32.png`, `apple-icon-152x152.png` | `assets/images/favicon/…` | Site favicon set |
 
-## 10. Images seen in the dump but intentionally unused
+## 10. Slider variants found in the dump
 
-- `coming-soon.jpg`, `comingsoon.jpg`, `login.jpg`, `gmap.jpg` (Google Maps embed replacement —
-  contact page deliberately uses a static link instead of a tracking embed), `paymonthly.jpg*`,
-  `newgif.gif` ("NEW" gif), `default.jpg`, `default2.jpg`, `cygnusg.png`, `starstext.png`,
-  `nataniallogo.png` (national emblem duplicate), `first.png`, `smicon2/3/4` variants,
-  everything under `front/OLD/`, `OLDSITE/img/` (old placeholder portfolio).
+Two near-identical slider sets exist: the live DB pointed at `uploads/front/{11,2,3,4,51,6,7}.jpg`,
+while `uploads/front/{21,31,41,52,61,71}.jpg` (= `front/assets/images/banner/{2..7}.jpg`) hold a
+redesign with the full title "Physical Sciences" instead of "Physics". The shipped
+`slide-physics.jpg` uses the full-title variant; all other slides are byte-identical between sets.
+
+## 11. Images seen in the dump but intentionally unused
+
+- `moe.jpg` (MoE wordmark+emblem — duplicate meaning of the header emblem; kept in `assets/images/` as spare),
+  `nataniallogo.png` (small national-emblem duplicate), `first.png` (dated "first call April 22 2019"
+  promo graphic), `approveimg.jpg` ("Selected proposals are yet to be announced" placeholder — the live
+  page used `approveimg(1).jpg`, which is what we ship), `coming-soon.jpg`, `comingsoon.jpg`, `login.jpg`,
+  `paymonthly.jpg*`, `newgif.gif` ("NEW" badge), `default.jpg`, `default2.jpg` (generic inner banner —
+  every shipped page has its specific banner), `cygnusg.png` (18×29 pixel fragment),
+  everything under `front/OLD/`, `OLDSITE/img/` (old placeholder portfolio, incl. `img/portfolio/**`).
